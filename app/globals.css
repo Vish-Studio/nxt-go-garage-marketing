@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: var(--font-poppins);
+  --font-prompt: var(--font-prompt);
+  
+  --color-accent: #F8E165;
+  --color-primary: #FFFFFF;
+  --color-secondary: #1A1A1A;
+  --color-light: #F3F3EF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+

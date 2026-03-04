@@ -1,8 +1,8 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/nxt-go-garage-marketing',
+  output: "export",
+  basePath: "/nxt-go-garage-marketing",
   trailingSlash: true,
   reactStrictMode: true,
   eslint: {
@@ -14,11 +14,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  transpilePackages: ['motion'],
-  webpack: (config, {dev}) => {
+  transpilePackages: ["motion"],
+  webpack: (config, { dev }) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
     // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
-    if (dev && process.env.DISABLE_HMR === 'true') {
+    if (dev && process.env.DISABLE_HMR === "true") {
       config.watchOptions = {
         ignored: /.*/,
       };

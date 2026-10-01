@@ -68,7 +68,7 @@ export default function DashboardPreview() {
                       <p className="text-sm font-bold text-secondary">$420.00</p>
                     </div>
                   </div>
-                  <button className="w-full py-4 bg-secondary text-primary rounded-2xl text-sm font-bold hover:bg-secondary/90 transition-colors">
+                  <button data-track="live_feed_click" data-track-location="dashboard_preview" className="w-full py-4 bg-secondary text-primary rounded-2xl text-sm font-bold hover:bg-secondary/90 transition-colors">
                     View Live Workshop Feed
                   </button>
                 </div>

@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 rounded-full bg-light flex items-center justify-center text-secondary/60 hover:bg-accent hover:text-secondary transition-all">
+                <a key={idx} href="#" data-track="social_click" data-track-label={['facebook','twitter','instagram','linkedin'][idx]} data-track-location="footer" className="w-10 h-10 rounded-full bg-light flex items-center justify-center text-secondary/60 hover:bg-accent hover:text-secondary transition-all">
                   <Icon className="w-5 h-5" />
                 </a>
               ))}

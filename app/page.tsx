@@ -26,10 +26,10 @@ export default function Home() {
               Join thousands of satisfied drivers who have switched to the most transparent and technologically advanced garage in the country.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto bg-secondary text-primary px-10 py-5 rounded-full text-lg font-bold hover:bg-secondary/90 transition-all shadow-md">
+              <button data-track="book_service_click" data-track-location="final_cta" className="w-full sm:w-auto bg-secondary text-primary px-10 py-5 rounded-full text-lg font-bold hover:bg-secondary/90 transition-all shadow-md">
                 Book Your First Service
               </button>
-              <button className="w-full sm:w-auto bg-primary text-secondary px-10 py-5 rounded-full text-lg font-bold hover:bg-primary/90 transition-all shadow-sm">
+              <button data-track="view_pricing_click" data-track-location="final_cta" className="w-full sm:w-auto bg-primary text-secondary px-10 py-5 rounded-full text-lg font-bold hover:bg-primary/90 transition-all shadow-sm">
                 View Pricing
               </button>
             </div>

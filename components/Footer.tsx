@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 rounded-full bg-light flex items-center justify-center text-secondary/60 hover:bg-accent hover:text-secondary transition-all">
+                <a key={idx} href="#" data-track="social_click" data-track-label={['facebook','twitter','instagram','linkedin'][idx]} data-track-location="footer" className="w-10 h-10 rounded-full bg-light flex items-center justify-center text-secondary/60 hover:bg-accent hover:text-secondary transition-all">
                   <Icon className="w-5 h-5" />
                 </a>
               ))}
@@ -72,9 +72,20 @@ export default function Footer() {
           <p className="text-sm text-secondary/50">
             © {new Date().getFullYear()} GoGarage Technologies. All rights reserved.
           </p>
-          <div className="flex gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <a href="#" className="text-sm text-secondary/50 hover:text-accent">Privacy Policy</a>
             <a href="#" className="text-sm text-secondary/50 hover:text-accent">Terms of Service</a>
+            <a
+              href="https://www.vish.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="studio_credit_click"
+              data-track-location="footer"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-secondary/70 hover:text-secondary transition-colors"
+            >
+              Website built by <span className="bg-accent/60 px-2 py-0.5 rounded-md text-secondary">VISH studio</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>

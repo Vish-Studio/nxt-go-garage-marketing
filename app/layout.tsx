@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Poppins, Prompt } from 'next/font/google';
 import './globals.css';
+import CookieConsent from '@/components/CookieConsent';
+import Analytics from '@/components/Analytics';
+import EventTracker from '@/components/EventTracker';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,6 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning className={`${poppins.variable} ${prompt.variable}`}>
       <body suppressHydrationWarning className="font-poppins antialiased bg-primary text-secondary">
         {children}
+        <CookieConsent />
+        <Analytics />
+        <EventTracker />
       </body>
     </html>
   );

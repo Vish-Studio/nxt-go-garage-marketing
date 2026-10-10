@@ -30,10 +30,10 @@ export default function Hero() {
             GoGarage is redefining vehicle maintenance with AI-driven diagnostics, real-time repair tracking, and a commitment to absolute transparency.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto bg-accent text-secondary px-8 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-all flex items-center justify-center gap-3 group shadow-sm">
+            <button data-track="book_service_click" data-track-location="hero" className="w-full sm:w-auto bg-accent text-secondary px-8 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-all flex items-center justify-center gap-3 group shadow-sm">
               Book a Service <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="w-full sm:w-auto bg-primary border-2 border-light text-secondary px-8 py-4 rounded-full text-lg font-bold hover:bg-light transition-all">
+            <button data-track="explore_technology_click" data-track-location="hero" className="w-full sm:w-auto bg-primary border-2 border-light text-secondary px-8 py-4 rounded-full text-lg font-bold hover:bg-light transition-all">
               Explore Technology
             </button>
           </motion.div>

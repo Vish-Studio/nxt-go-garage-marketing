@@ -19,9 +19,9 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             {['Services', 'Technology', 'About', 'Contact'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="text-sm font-bold text-secondary/80 hover:text-secondary transition-colors">{item}</a>
+              <a key={item} href={`#${item.toLowerCase()}`} data-track="nav_click" data-track-location="navbar" className="text-sm font-bold text-secondary/80 hover:text-secondary transition-colors">{item}</a>
             ))}
-            <button className="bg-secondary text-primary px-6 py-2.5 rounded-full text-sm font-bold hover:bg-accent hover:text-secondary transition-all flex items-center gap-2 group">
+            <button data-track="client_login_click" data-track-location="navbar" className="bg-secondary text-primary px-6 py-2.5 rounded-full text-sm font-bold hover:bg-accent hover:text-secondary transition-all flex items-center gap-2 group">
               Client Login <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -36,9 +36,9 @@ export default function Navbar() {
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="md:hidden bg-primary border-b border-light">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {['Services', 'Technology', 'About', 'Contact'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="block px-3 py-2 rounded-md text-base font-bold text-secondary/80 hover:bg-light hover:text-secondary">{item}</a>
+              <a key={item} href={`#${item.toLowerCase()}`} data-track="nav_click" data-track-location="navbar_mobile" className="block px-3 py-2 rounded-md text-base font-bold text-secondary/80 hover:bg-light hover:text-secondary">{item}</a>
             ))}
-            <button className="w-full mt-4 bg-secondary text-primary px-6 py-3 rounded-xl text-base font-bold hover:bg-accent hover:text-secondary transition-colors">Client Login</button>
+            <button data-track="client_login_click" data-track-location="navbar_mobile" className="w-full mt-4 bg-secondary text-primary px-6 py-3 rounded-xl text-base font-bold hover:bg-accent hover:text-secondary transition-colors">Client Login</button>
           </div>
         </motion.div>
       )}
